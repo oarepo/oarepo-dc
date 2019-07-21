@@ -46,7 +46,10 @@ setup(
     packages=['invenio_oarepo_dc'],
     entry_points={
         'invenio_search.templates': [
-            'invneio_oarepo_dc = invenio_oarepo_dc.templates:get_templates',
+            'invenio_oarepo_dc = invenio_oarepo_dc.templates:get_templates',
+        ],
+        'invenio_jsonschemas.schemas': [
+            'invenio_oarepo_dc = invenio_oarepo_dc.jsonschemas'
         ],
     },
     include_package_data=True,
