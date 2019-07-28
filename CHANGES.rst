@@ -1,7 +1,7 @@
 Changes
 =======
 
-[Version 3.1.0]
+[Version 1.1.0]
 ===============
 
-  - Added Permission factories
+  - Made DC terms ES mappings includable
