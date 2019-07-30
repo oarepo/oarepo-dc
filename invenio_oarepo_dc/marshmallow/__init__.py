@@ -9,19 +9,18 @@
 
 from __future__ import absolute_import, print_function
 
-from invenio_records_rest.schemas import StrictKeysMixin
 from invenio_records_rest.schemas.fields import DateString, SanitizedUnicode
-from marshmallow import fields
+from invenio_oarepo_multilingual.marshmallow import MultilingualStringSchemaV1
 
 
 class DCObjectSchemaV1Mixin:
-    title = SanitizedUnicode(required=True)
-    alternative = SanitizedUnicode(required=False)
-    abstract = SanitizedUnicode(required=False)
+    title = MultilingualStringSchemaV1(required=True)
+    alternative = MultilingualStringSchemaV1(required=False)
+    abstract = MultilingualStringSchemaV1(required=False)
     creator = SanitizedUnicode(required=True)
     contributor = SanitizedUnicode(required=False)
     dateSubmitted = DateString(required=False)
     available = DateString(required=False)
     created = DateString(required=True)
     modified = DateString(required=True)
-    description = SanitizedUnicode(required=False)
+    description = MultilingualStringSchemaV1(required=False)

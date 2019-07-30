@@ -8,16 +8,16 @@
                     "type": "string"
                 },
                 "abstract": {
-                    "type": "string"
+                    "$ref": "multilingual-v1.0.0.json#/definitions/multilingualString"
                 },
                 "title": {
-                    "type": "string"
+                    "$ref": "multilingual-v1.0.0.json#/definitions/multilingualString"
                 },
                 "alternative": {
-                    "type": "string"
+                    "$ref": "multilingual-v1.0.0.json#/definitions/multilingualString"
                 },
                 "description": {
-                    "type": "string"
+                    "$ref": "multilingual-v1.0.0.json#/definitions/multilingualString"
                 },
                 "created": {
                     "type": "string",

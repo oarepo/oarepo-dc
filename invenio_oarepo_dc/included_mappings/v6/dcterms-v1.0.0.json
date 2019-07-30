@@ -6,40 +6,16 @@
         "type": "keyword"
       },
       "abstract": {
-        "type": "text",
-        "fields": {
-          "keyword": {
-            "type": "keyword",
-            "ignore_above": 100
-          }
-        }
+        "type": "multilingual-v1.0.0.json#/MultilingualString"
       },
       "title": {
-        "type": "text",
-        "fields": {
-          "keyword": {
-            "type": "keyword",
-            "ignore_above": 100
-          }
-        }
+        "type": "multilingual-v1.0.0.json#/MultilingualString"
       },
       "alternative": {
-        "type": "text",
-        "fields": {
-          "keyword": {
-            "type": "keyword",
-            "ignore_above": 100
-          }
-        }
+        "type": "multilingual-v1.0.0.json#/MultilingualString"
       },
       "description": {
-        "type": "text",
-        "fields": {
-          "keyword": {
-            "type": "keyword",
-            "ignore_above": 100
-          }
-        }
+        "type": "multilingual-v1.0.0.json#/MultilingualString"
       },
       "created": {
         "type": "date",

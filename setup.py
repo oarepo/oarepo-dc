@@ -12,6 +12,7 @@ INVENIO_VERSION = "3.1.0"
 install_requires = [
     'invenio[{db},base]~={version}'.format(
         db=DATABASE, version=INVENIO_VERSION),
+    'invenio-oarepo-multilingual'
 ]
 
 tests_require = [
@@ -47,9 +48,6 @@ setup(
     entry_points={
         'invenio_oarepo_mapping_includes': [
             'invenio_oarepo_dc=invenio_oarepo_dc.included_mappings'
-        ],
-        'invenio_search.templates': [
-            'invenio_oarepo_dc = invenio_oarepo_dc.templates:get_templates',
         ],
         'invenio_jsonschemas.schemas': [
             'invenio_oarepo_dc = invenio_oarepo_dc.jsonschemas'
