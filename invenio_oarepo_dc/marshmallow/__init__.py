@@ -26,3 +26,4 @@ class DCObjectSchemaV1Mixin(Schema):
     created = DateString(required=True)
     modified = DateString(required=True)
     description = MultilingualStringSchemaV1(required=False)
+    identifier = SanitizedUnicode(required=True)
