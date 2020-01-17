@@ -9,10 +9,9 @@
 
 from __future__ import absolute_import, print_function
 
+from invenio_oarepo_multilingual.marshmallow import MultilingualStringSchemaV1
 from invenio_records_rest.schemas.fields import DateString, SanitizedUnicode
 from marshmallow import Schema
-
-from invenio_oarepo_multilingual.marshmallow import MultilingualStringSchemaV1
 
 
 class DCObjectSchemaV1Mixin(Schema):

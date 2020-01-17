@@ -5,25 +5,26 @@ import os
 from setuptools import setup
 
 readme = open('README.rst').read()
+OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.1.1')
 
-DATABASE = "postgresql"
-INVENIO_VERSION = "3.1.0"
 
 install_requires = [
-    'invenio[{db},base]~={version}'.format(
-        db=DATABASE, version=INVENIO_VERSION),
     'invenio-oarepo-multilingual'
 ]
 
 tests_require = [
     'pytest>=4.6.3',
-    'pytest-invenio>=1.0.2,<1.1.0',
-    'pytest-cov>=1.8.0',
-    'pytest-pep8>=1.0.6',
 ]
 
 extras_require = {
-    'tests': tests_require,
+    'tests': [
+        *tests_require,
+        'oarepo[tests]~={version}'.format(
+            version=OAREPO_VERSION)],
+    'tests-es7': [
+        *tests_require,
+        'oarepo[tests-es7]~={version}'.format(
+            version=OAREPO_VERSION)],
 }
 
 setup_requires = [
