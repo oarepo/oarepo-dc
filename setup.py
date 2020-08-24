@@ -9,11 +9,15 @@ OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.1.1')
 
 
 install_requires = [
-    'invenio-oarepo-multilingual'
+    'oarepo-multilingual'
 ]
 
 tests_require = [
+    'invenio[base,metadata,sqlite,elasticsearch7]',
     'pytest>=4.6.3',
+    'pydocstyle',
+    'isort',
+    'check-manifest'
 ]
 
 extras_require = {
@@ -32,26 +36,26 @@ setup_requires = [
 ]
 
 g = {}
-with open(os.path.join('invenio_oarepo_dc', 'version.py'), 'rt') as fp:
+with open(os.path.join('oarepo_dc', 'version.py'), 'rt') as fp:
     exec(fp.read(), g)
     version = g['__version__']
 
 setup(
-    name="invenio_oarepo_dc",
+    name="oarepo_dc",
     version=version,
-    url="https://github.com/oarepo/invenio-oarepo-dc",
+    url="https://github.com/oarepo/oarepo-dc",
     license="MIT",
     author="Miroslav Simek",
     author_email="miroslav.simek@vscht.cz",
     description="DCTerms support for OARepo (just selected props)",
     zip_safe=False,
-    packages=['invenio_oarepo_dc'],
+    packages=['oarepo_dc'],
     entry_points={
-        'invenio_oarepo_mapping_includes': [
-            'invenio_oarepo_dc=invenio_oarepo_dc.included_mappings'
+        'inoarepo_mapping_includes': [
+            'oarepo_dc=oarepo_dc.included_mappings'
         ],
         'invenio_jsonschemas.schemas': [
-            'invenio_oarepo_dc = invenio_oarepo_dc.jsonschemas'
+            'oarepo_dc = oarepo_dc.jsonschemas'
         ],
     },
     include_package_data=True,

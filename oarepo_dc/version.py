@@ -23,9 +23,9 @@
 # SOFTWARE.
 #
 
-"""Version information for invenio_oarepo_dc repository.
+"""Version information for oarepo_dc repository.
 
-This file is imported by ``invenio_oarepo_dc.__init__``,
+This file is imported by ``oarepo_dc.__init__``,
 and parsed by ``setup.py``.
 """
 

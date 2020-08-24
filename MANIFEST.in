@@ -12,5 +12,5 @@ exclude run-tests.sh
 exclude tests
 include *.rst
 
-recursive-include invenio_oarepo_dc *.py
-recursive-include invenio_oarepo_dc *.json
+recursive-include oarepo_dc *.py
+recursive-include oarepo_dc *.json
