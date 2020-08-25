@@ -9,6 +9,7 @@ OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.1.1')
 
 
 install_requires = [
+    'invenio[base,metadata,sqlite,elasticsearch7]',
     'marshmallow',
     'oarepo-multilingual',
     'flask'
