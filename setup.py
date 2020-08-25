@@ -5,7 +5,7 @@ import os
 from setuptools import setup
 
 readme = open('README.rst').read()
-OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.2.2')
+OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.2.1')
 
 
 install_requires = [
