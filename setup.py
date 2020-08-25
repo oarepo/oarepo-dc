@@ -5,7 +5,7 @@ import os
 from setuptools import setup
 
 readme = open('README.rst').read()
-OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.1.1')
+OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.2.2')
 
 
 install_requires = [
@@ -15,7 +15,7 @@ install_requires = [
 ]
 
 tests_require = [
-    'invenio[base,metadata,sqlite,elasticsearch7]',
+    'invenio[base,metadata,sqlite,elasticsearch7]~={version}'.format(version=OAREPO_VERSION),
     'oarepo-multilingual',
     'pytest>=4.6.3',
     'jsonschema',
