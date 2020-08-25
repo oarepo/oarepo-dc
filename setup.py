@@ -10,11 +10,12 @@ OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.1.1')
 
 install_requires = [
     'marshmallow',
-    'oarepo-multilingual'
+    'oarepo-multilingual',
+    'flask'
 ]
 
 tests_require = [
-    'invenio[base,metadata,sqlite,elasticsearch7]',
+    'invenio[base,metadata]',
     'pytest>=4.6.3',
     'jsonschema',
     'pydocstyle',

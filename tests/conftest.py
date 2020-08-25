@@ -16,7 +16,6 @@ import tempfile
 import pytest
 from flask import Flask
 from invenio_base.signals import app_loaded
-from invenio_db import InvenioDB
 from invenio_indexer import InvenioIndexer
 from invenio_jsonschemas import InvenioJSONSchemas
 from invenio_pidstore import InvenioPIDStore
@@ -55,7 +54,6 @@ def app(request):
 
     app.secret_key = 'changeme'
 
-    InvenioDB(app)
     InvenioRecords(app)
     InvenioJSONSchemas(app)
     InvenioPIDStore(app)
