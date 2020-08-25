@@ -1,4 +1,7 @@
 {
+  "mappings": {
+    "properties": {
+
   "DCObject": {
     "type": "nested",
     "properties": {
@@ -6,16 +9,16 @@
         "type": "keyword"
       },
       "abstract": {
-        "type": "multilingual-v1.0.0.json#/MultilingualString"
+        "type": "multilingual"
       },
       "title": {
-        "type": "multilingual-v1.0.0.json#/MultilingualString"
+        "type": "multilingual"
       },
       "alternative": {
-        "type": "multilingual-v1.0.0.json#/MultilingualString"
+        "type": "multilingual"
       },
       "description": {
-        "type": "multilingual-v1.0.0.json#/MultilingualString"
+        "type": "multilingual"
       },
       "created": {
         "type": "date",
@@ -57,3 +60,6 @@
     }
   }
 }
+    }
+  }
+

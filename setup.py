@@ -17,7 +17,8 @@ tests_require = [
     'pytest>=4.6.3',
     'pydocstyle',
     'isort',
-    'check-manifest'
+    'check-manifest',
+    'oarepo-mapping-includes'
 ]
 
 extras_require = {
@@ -55,7 +56,7 @@ setup(
             'oarepo_dc=oarepo_dc.included_mappings'
         ],
         'invenio_jsonschemas.schemas': [
-            'oarepo_dc = oarepo_dc.jsonschemas'
+            'oarepo_dc = oarepo_dc.jsonschemas',
         ],
     },
     include_package_data=True,
