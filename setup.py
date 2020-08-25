@@ -15,7 +15,7 @@ install_requires = [
 ]
 
 tests_require = [
-    'invenio[base,metadata,accounts]',
+    'invenio[accounts,auth,base,elasticsearch6,metadata,postgresql,tests]',
     'pytest>=4.6.3',
     'jsonschema',
     'pydocstyle',
