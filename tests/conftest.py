@@ -27,7 +27,7 @@ from oarepo_mapping_includes.ext import OARepoMappingIncludesExt
 
 @pytest.yield_fixture(scope="function")
 def app(request):
-    """Test multilingual."""
+    """Test mdcobject."""
     instance_path = tempfile.mkdtemp()
     app = Flask('testapp', instance_path=instance_path)
 
