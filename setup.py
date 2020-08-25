@@ -15,15 +15,14 @@ install_requires = [
 ]
 
 tests_require = [
-    'invenio[base,metadata,sqlite,elasticsearch7]~={version}'.format(version=OAREPO_VERSION),
     'oarepo-multilingual',
-    'pytest>=4.6.3',
-    'jsonschema',
-    'pydocstyle',
-    'isort',
-    'check-manifest',
+    # 'pytest>=4.6.3',
+    # 'jsonschema',
+    # 'pydocstyle',
+    # 'isort',
+    # 'check-manifest',
     'oarepo-mapping-includes',
-    'pytest-cov'
+    # 'pytest-cov'
 ]
 
 extras_require = {
