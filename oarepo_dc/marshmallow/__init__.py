@@ -11,7 +11,6 @@ from __future__ import absolute_import, print_function
 
 from invenio_records_rest.schemas.fields import DateString, SanitizedUnicode
 from marshmallow import Schema
-from marshmallow.fields import Nested
 from oarepo_multilingual.marshmallow import MultilingualStringV2
 
 
@@ -28,8 +27,6 @@ class DCObjectSchemaV2Mixin(Schema):
     description = MultilingualStringV2(required=False)
     identifier = SanitizedUnicode(required=True)
 
-def DCObjectV2(**kwargs):
-    """Return a schema for dc object"""
-    return Nested(DCObjectSchemaV2Mixin(), **kwargs)
 
-__all__ = ('DCObjectV2',)
+
+__all__ = ('DCObjectSchemaV2Mixin',)

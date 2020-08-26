@@ -10,51 +10,46 @@ import marshmallow
 import pytest
 from marshmallow import ValidationError
 
-from oarepo_dc.marshmallow import DCObjectV2
+from oarepo_dc.marshmallow import DCObjectSchemaV2Mixin
 
+
+class MD(DCObjectSchemaV2Mixin, marshmallow.Schema):
+    pass
 
 def test_marshmallow_app(app):
     "Test marshmallow with app"
-    class MD(marshmallow.Schema):
-        these = DCObjectV2()
-
     app.config.update(SUPPORTED_LANGUAGES=["cs", "en"])
-    data = {"these":
-                {"title": {"cs": "jej", "en":"yay"},
+    data = {"title": {"cs": "jej", "en":"yay"},
                  "creator": "Alzbeta Pokorna",
                  "created": "2020-05-12",
                  "modified": "2020-05-12",
                  "identifier": "id"}
-            }
+
     assert data == MD().load(data)
 
-    data = {"these":
-                {"title": {"cs": "jej", "en": "yay", "en-us": "ayayay"},
+    data = {"title": {"cs": "jej", "en": "yay", "en-us": "ayayay"},
                  "creator": "Alzbeta Pokorna",
                  "created": "2020-05-12",
                  "modified": "2020-05-12",
                  "identifier": "id"}
-            }
+
     with pytest.raises(ValidationError):
         MD().load(data)
 
 
 def test_marshmallow():
     """Test marshmallow."""
-    class MD(marshmallow.Schema):
-        these = DCObjectV2()
 
-    data = {"these":
-                {"title":{"cs": "jej"},
+
+    data = {"title":{"cs": "jej"},
                  "creator": "Alzbeta Pokorna",
                  "created": "2020-05-12",
                  "modified": "2020-05-12",
                  "identifier": "id"}
-    }
+
     assert data == MD().load(data)
 
-    data = {"these":
-                {"title": {"cs": "jej"},
+    data = {"title": {"cs": "jej"},
                  "alternative": {"en-us": "yay", "cs": "jej"},
                  "abstract": {},
                  "creator": "Alzbeta Pokorna",
@@ -65,45 +60,41 @@ def test_marshmallow():
                  "modified": "2020-05-12",
                  "description": {"en-us": "yay", "cs": "jej"},
                  "identifier": "id"}
-            }
+
 
     assert data == MD().load(data)
 
-    data = {"these":
-                {"title": {"cs": "jej"},
+    data = {"title": {"cs": "jej"},
                  "creator": 1,
                  "created": "2020-05-10",
                  "modified": "2020-05-12",
                  "identifier": "id"}
-            }
+
     with pytest.raises(ValidationError):
         MD().load(data)
-    data = {"these":
-                {"title": {"cs": "jej"},
+    data = {"title": {"cs": "jej"},
                  "creator": "Alzbeta Pokorna",
                  "created": "2020-051",
                  "modified": "2020-05-12",
                  "identifier": "id"}
-            }
+
     with pytest.raises(ValidationError):
         MD().load(data)
 
-    data = {"these":
-                {"title": "cs",
+    data = {"title": "cs",
                  "creator": "Alzbeta Pokorna",
                  "created": "2020-05-01",
                  "modified": "2020-05-12",
                  "identifier": "id"}
-            }
+
     with pytest.raises(ValidationError):
         MD().load(data)
 
-    data = {"these":
-                {"title": {"csss": "jej"},
+    data = {"title": {"csss": "jej"},
                  "creator": "Alzbeta Pokorna",
                  "created": "2020-05-01",
                  "modified": "2020-05-12",
                  "identifier": "id"}
-            }
+
     with pytest.raises(ValidationError):
         MD().load(data)
