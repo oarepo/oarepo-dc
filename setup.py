@@ -4,7 +4,8 @@ import os
 
 from setuptools import setup
 
-readme = open('README.rst').read()
+readme = open('README.md').read()
+history = open('CHANGES.md').read()
 OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.2.1')
 
 
@@ -50,9 +51,11 @@ setup(
     version=version,
     url="https://github.com/oarepo/oarepo-dc",
     license="MIT",
-    author="Miroslav Simek",
-    author_email="miroslav.simek@vscht.cz",
+    author="Alzbeta Pokorna",
+    author_email="alzbeta.pokorna@cesnet.cz",
     description="DCTerms support for OARepo (just selected props)",
+long_description=readme + '\n\n' + history,
+    long_description_content_type='text/markdown',
     zip_safe=False,
     packages=['oarepo_dc'],
     entry_points={
