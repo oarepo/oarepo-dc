@@ -8,16 +8,16 @@
                     "type": "string"
                 },
                 "abstract": {
-                    "$ref": "multilingual-v1.0.0.json#/definitions/multilingualString"
+                    "$ref": "/schemas/multilingual-v2.0.0.json#/definitions/multilingual"
                 },
                 "title": {
-                    "$ref": "multilingual-v1.0.0.json#/definitions/multilingualString"
+                    "$ref": "/schemas/multilingual-v2.0.0.json#/definitions/multilingual"
                 },
                 "alternative": {
-                    "$ref": "multilingual-v1.0.0.json#/definitions/multilingualString"
+                    "$ref": "/schemas/multilingual-v2.0.0.json#/definitions/multilingual"
                 },
                 "description": {
-                    "$ref": "multilingual-v1.0.0.json#/definitions/multilingualString"
+                    "$ref": "/schemas/multilingual-v2.0.0.json#/definitions/multilingual"
                 },
                 "created": {
                     "type": "string",

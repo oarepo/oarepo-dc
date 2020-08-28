@@ -4,16 +4,26 @@ import os
 
 from setuptools import setup
 
-readme = open('README.rst').read()
-OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.1.1')
+readme = open('README.md').read()
+history = open('CHANGES.md').read()
+OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.2.1')
 
 
 install_requires = [
-    'invenio-oarepo-multilingual'
+    'marshmallow',
+    'oarepo-multilingual',
+    'flask'
 ]
 
 tests_require = [
-    'pytest>=4.6.3',
+    'oarepo-multilingual',
+    # 'pytest>=4.6.3',
+    # 'jsonschema',
+    # 'pydocstyle',
+    # 'isort',
+    # 'check-manifest',
+    'oarepo-mapping-includes',
+    # 'pytest-cov'
 ]
 
 extras_require = {
@@ -32,26 +42,28 @@ setup_requires = [
 ]
 
 g = {}
-with open(os.path.join('invenio_oarepo_dc', 'version.py'), 'rt') as fp:
+with open(os.path.join('oarepo_dc', 'version.py'), 'rt') as fp:
     exec(fp.read(), g)
     version = g['__version__']
 
 setup(
-    name="invenio_oarepo_dc",
+    name="oarepo_dc",
     version=version,
-    url="https://github.com/oarepo/invenio-oarepo-dc",
+    url="https://github.com/oarepo/oarepo-dc",
     license="MIT",
-    author="Miroslav Simek",
-    author_email="miroslav.simek@vscht.cz",
+    author="Alzbeta Pokorna",
+    author_email="alzbeta.pokorna@cesnet.cz",
     description="DCTerms support for OARepo (just selected props)",
+long_description=readme + '\n\n' + history,
+    long_description_content_type='text/markdown',
     zip_safe=False,
-    packages=['invenio_oarepo_dc'],
+    packages=['oarepo_dc'],
     entry_points={
-        'invenio_oarepo_mapping_includes': [
-            'invenio_oarepo_dc=invenio_oarepo_dc.included_mappings'
+        'inoarepo_mapping_includes': [
+            'oarepo_dc=oarepo_dc.included_mappings'
         ],
         'invenio_jsonschemas.schemas': [
-            'invenio_oarepo_dc = invenio_oarepo_dc.jsonschemas'
+            'oarepo_dc = oarepo_dc.jsonschemas',
         ],
     },
     include_package_data=True,
