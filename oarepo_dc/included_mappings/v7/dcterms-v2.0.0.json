@@ -1,6 +1,5 @@
 {
   "DCObject": {
-    "type": "nested",
     "properties": {
       "identifier": {
         "type": "keyword"
