@@ -6,7 +6,7 @@ from setuptools import setup
 
 readme = open('README.md').read()
 history = open('CHANGES.md').read()
-OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.2.1')
+OAREPO_VERSION = os.environ.get('OAREPO_VERSION', '3.3.0')
 
 
 install_requires = [
@@ -54,12 +54,12 @@ setup(
     author="Alzbeta Pokorna",
     author_email="alzbeta.pokorna@cesnet.cz",
     description="DCTerms support for OARepo (just selected props)",
-long_description=readme + '\n\n' + history,
+    long_description=readme + '\n\n' + history,
     long_description_content_type='text/markdown',
     zip_safe=False,
     packages=['oarepo_dc'],
     entry_points={
-        'inoarepo_mapping_includes': [
+        'oarepo_mapping_includes': [
             'oarepo_dc=oarepo_dc.included_mappings'
         ],
         'invenio_jsonschemas.schemas': [
