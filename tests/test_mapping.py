@@ -11,7 +11,6 @@ def test_mapping(app):
     "properties": {
 
   "DCObject": {
-    "type": "nested",
     "properties": {
       "identifier": {
         "type": "keyword"
