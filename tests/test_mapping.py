@@ -19,13 +19,13 @@ def test_mapping(app):
                     {
                         'cs': {'type': 'text',
                                'fields': {
-                                   "keywords": {
+                                   "raw": {
                                        "type": "keyword"
                                    }
                                }},
                         'en': {'type': 'text',
                                'fields': {
-                                   "keywords": {
+                                   "raw": {
                                        "type": "keyword"
                                    }
                                }
@@ -36,13 +36,13 @@ def test_mapping(app):
                     {
                         'cs': {'type': 'text',
                                'fields': {
-                                   "keywords": {
+                                   "raw": {
                                        "type": "keyword"
                                    }
                                }},
                         'en': {'type': 'text',
                                'fields': {
-                                   "keywords": {
+                                   "raw": {
                                        "type": "keyword"
                                    }
                                }
@@ -53,13 +53,13 @@ def test_mapping(app):
                     {
                         'cs': {'type': 'text',
                                'fields': {
-                                   "keywords": {
+                                   "raw": {
                                        "type": "keyword"
                                    }
                                }},
                         'en': {'type': 'text',
                                'fields': {
-                                   "keywords": {
+                                   "raw": {
                                        "type": "keyword"
                                    }
                                }
@@ -70,13 +70,13 @@ def test_mapping(app):
                     {
                         'cs': {'type': 'text',
                                'fields': {
-                                   "keywords": {
+                                   "raw": {
                                        "type": "keyword"
                                    }
                                }},
                         'en': {'type': 'text',
                                'fields': {
-                                   "keywords": {
+                                   "raw": {
                                        "type": "keyword"
                                    }
                                }
@@ -102,7 +102,7 @@ def test_mapping(app):
       "creator": {
         "type": "text",
         "fields": {
-          "keyword": {
+          "raw": {
             "type": "keyword",
             "ignore_above": 100
           }
@@ -111,7 +111,7 @@ def test_mapping(app):
       "contributor": {
         "type": "text",
         "fields": {
-          "keyword": {
+          "raw": {
             "type": "keyword",
             "ignore_above": 100
           }
