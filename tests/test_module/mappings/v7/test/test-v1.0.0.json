@@ -38,7 +38,7 @@
       "creator": {
         "type": "text",
         "fields": {
-          "keyword": {
+          "raw": {
             "type": "keyword",
             "ignore_above": 100
           }
@@ -47,7 +47,7 @@
       "contributor": {
         "type": "text",
         "fields": {
-          "keyword": {
+          "raw": {
             "type": "keyword",
             "ignore_above": 100
           }
