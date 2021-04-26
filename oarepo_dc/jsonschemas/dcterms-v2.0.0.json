@@ -1,7 +1,8 @@
 {
     "definitions": {
         "DCObject": {
-            "description": "DublinCore object basic metadata v2.0.0",
+            "title": "DublinCore Object v2.0.0",
+            "description": "DublinCore Object basic metadata v2.0.0",
             "type": "object",
             "properties": {
                 "identifier": {
