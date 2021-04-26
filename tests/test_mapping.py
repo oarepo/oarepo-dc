@@ -17,70 +17,18 @@ def test_mapping(app):
       },
       "abstract": {'type': 'object', 'properties':
                     {
-                        'cs': {'type': 'text',
-                               'fields': {
-                                   "raw": {
-                                       "type": "keyword"
-                                   }
-                               }},
-                        'en': {'type': 'text',
-                               'fields': {
-                                   "raw": {
-                                       "type": "keyword"
-                                   }
-                               }
-                               }
                     }
                           },
       "title": {'type': 'object', 'properties':
                     {
-                        'cs': {'type': 'text',
-                               'fields': {
-                                   "raw": {
-                                       "type": "keyword"
-                                   }
-                               }},
-                        'en': {'type': 'text',
-                               'fields': {
-                                   "raw": {
-                                       "type": "keyword"
-                                   }
-                               }
-                               }
                     }
                           },
       "alternative": {'type': 'object', 'properties':
                     {
-                        'cs': {'type': 'text',
-                               'fields': {
-                                   "raw": {
-                                       "type": "keyword"
-                                   }
-                               }},
-                        'en': {'type': 'text',
-                               'fields': {
-                                   "raw": {
-                                       "type": "keyword"
-                                   }
-                               }
-                               }
                     }
                           },
       "description": {'type': 'object', 'properties':
                     {
-                        'cs': {'type': 'text',
-                               'fields': {
-                                   "raw": {
-                                       "type": "keyword"
-                                   }
-                               }},
-                        'en': {'type': 'text',
-                               'fields': {
-                                   "raw": {
-                                       "type": "keyword"
-                                   }
-                               }
-                               }
                     }
                           },
       "created": {
