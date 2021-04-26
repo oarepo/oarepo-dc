@@ -28,5 +28,4 @@ class DCObjectSchemaV2Mixin(Schema):
     identifier = SanitizedUnicode(required=True)
 
 
-
 __all__ = ('DCObjectSchemaV2Mixin',)
